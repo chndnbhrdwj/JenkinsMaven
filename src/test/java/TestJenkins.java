@@ -6,21 +6,23 @@ import org.junit.*;
 public class TestJenkins {
 
     @BeforeClass
-    public void beforeClassMethod(){
+    public static void beforeClassMethod() {
         System.out.println("In a before class");
+    }
+
+    @AfterClass
+    public static void afterClassMethod() {
+        System.out.println("In a after class");
     }
 
     @Before
     public void beforeMethod(){
         System.out.println("In a before method");
     }
+
     @After
     public void afterMethod(){
         System.out.println("In a after method");
-    }
-    @AfterClass
-    public void afterClassMethod(){
-        System.out.println("In a after class");
     }
 
     @Test
